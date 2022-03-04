@@ -10,11 +10,10 @@ f('AbrAcadAbRa', 'cAda') // 2
 def detect_anagrams(parent, child):
     anagrams = []
 
-    for i in range(len(parent)):
+    for i in range(len(parent) - len(child)):
         letter = parent[i]
 
         if letter in child:
-            if i <= len(parent) - len(child):
                 word = parent[i:i+len(child)]
 
                 if is_anagram(word, child):
